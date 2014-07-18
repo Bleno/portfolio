@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      metal:use-macro="load: main.pt">
+			<div id="content" metal:fill-slot="content">					
+					<div class="whead top-10">
+						<strong>Usuários</strong>
+					</div>
+					
+					<!-- table search input -->
+					<div class="table-search-holder sizing">
+						<input type="text" class="table-search" placeholder="Busca por linha">
+					</div>
+						
+					<div class="box holder tblr twhite">
+						<table>
+							<thead>
+								<tr>
+									<th>Nome</th><th>Login</th><th>Email</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr tal:repeat="row results">
+									<td>${row.json_reg.str_nm_user}</td><td>${row.json_reg.str_login}</td><td>${row.json_reg.str_email}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+			</div>
+				      	              	                               
+		
+</html>

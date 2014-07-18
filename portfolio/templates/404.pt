@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      metal:use-macro="load: main.pt">
+            <div id="content" metal:fill-slot="content">
+                <div class="wrapper">
+                    
+                    <div class="not-found">
+                        
+                        <div class="note">
+                            <span>404</span>
+                            <strong>Page not found</strong>
+                        </div>
+                        
+                        <form class="main">
+                            <div class="shadow">
+                                <div class="row example-search border-0 padd-0">
+                                    <div class="grid3 relative">
+                                        <input type="text" class="shiny no-shadow placeholder" placeholder="Placeholder for input...">
+                                        <a class="btn btn-default no-shadow" href="javascript:;">Go!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+        
+</html>

@@ -1,0 +1,142 @@
+[
+	{
+		"name": "BARCELONA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "BARCELONA@mail.com",
+		"web": "www.BARCELONA.com"
+	},
+	{
+		"name": "TARRAGONA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "TARRAGONA@mail.com",
+		"web": "www.TARRAGONA.com"
+	},
+	{
+		"name": "MADRID",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "MADRID@mail.com",
+		"web": "www.MADRID.com"
+	},
+	{
+		"name": "MURCIA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "MURCIA@mail.com",
+		"web": "www.MURCIA.com"
+	},
+	{
+		"name": "VALENCIA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "VALENCIA@mail.com",
+		"web": "www.VALENCIA.com"
+	},
+	{
+		"name": "PALMA DE MALLORCA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "MALLORCA@mail.com",
+		"web": "www.MALLORCA.com"
+	},
+	{
+		"name": "CORDOBA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "CORDOBA@mail.com",
+		"web": "www.CORDOBA.com"
+	},
+	{
+		"name": "MALAGA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "MALAGA@mail.com",
+		"web": "www.MALAGA.com"
+	},
+	{
+		"name": "SALAMANCA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "SALAMANCA@mail.com",
+		"web": "www.SALAMANCA.com"
+	},
+	{
+		"name": "VALLADOLID",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "VALLADOLID@mail.com",
+		"web": "www.VALLADOLID.com"
+	},
+	{
+		"name": "OVIEDO",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "OVIEDO@mail.com",
+		"web": "www.OVIEDO.com"
+	},
+	{
+		"name": "SEVILLA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "SEVILLA@mail.com",
+		"web": "www.SEVILLA.com"
+	},
+	{
+		"name": "MALAGA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "MALAGA@mail.com",
+		"web": "www.MALAGA.com"
+	},
+	{
+		"name": "VILANOVA I LA GELTRU",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "VILANOVA@mail.com",
+		"web": "www.VILANOVA.com"
+	},
+	{
+		"name": "PALENCIA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "PALENCIA@mail.com",
+		"web": "www.PALENCIA.com"
+	},
+	{
+		"name": "LEON",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "LEON@mail.com",
+		"web": "www.LEON.com"
+	},
+	{
+		"name": "ZARAGOZA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "ZARAGOZA@mail.com",
+		"web": "www.ZARAGOZA.com"
+	},
+	{
+		"name": "GIRONA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "GIRONA@mail.com",
+		"web": "www.GIRONA.com"
+	},
+	{
+		"name": "BENIDORM",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "BENIDORM@mail.com",
+		"web": "www.BENIDORM.com"
+	},
+	{
+		"name": "IBIZA",
+		"address": "c./ Libertat 113 - 115 1o - 1a",
+		"tel": "( +034 ) 670 42 42 14, ( +034 ) 670 17 00 54",
+		"email": "IBIZA@mail.com",
+		"web": "www.IBIZA.com"
+	}
+]

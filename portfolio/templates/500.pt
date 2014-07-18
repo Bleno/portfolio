@@ -1,0 +1,49 @@
+<!DOCTYPE html metal:define-macro="main">
+<!--[if lt IE 9]>      <html lang="en" class="ie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	
+	<!-- meta -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+	<meta name="keywords" content="Portfolio, Pyramid, sistema"/> 
+	<!-- favicon -->
+	<link rel="shortcut icon" href="${request.static_url('portfolio:static/default/img/favicon.png')}" type="image/png">
+	
+	<!-- page title -->
+	<title>${title} &nbsp;|&nbsp;PortFólio</title>
+	
+	<!-- css -->
+	<link href="${request.static_url('portfolio:static/default/css/bootstrap.css')}" rel="stylesheet" type="text/css" >
+
+	<link href="${request.static_url('portfolio:static/default/css/main.css')}" rel="stylesheet" type="text/css" >
+
+</head>
+<body>
+			<div id="content">
+				<div class="wrapper">
+					
+					<div class="not-found">
+						
+						<div class="note">
+							<span>500</span>
+							<strong>Internal Server Error</strong>
+						</div>
+						
+						<form class="main">
+							<div class="shadow">
+								<div class="row example-search border-0 padd-0">
+									<div class="grid3 relative">
+										<input type="text" class="shiny no-shadow placeholder" placeholder="Placeholder for input...">
+										<a class="btn btn-default no-shadow" href="javascript:;">Go!</a>
+									</div>
+								</div>
+							</div>
+						</form>
+					
+					</div>
+					
+				</div>
+			</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="keywords" content="spookynet.org, webdesignlab.org " /> 
+	<title>&nbsp;|&nbsp;Portifólio</title>
+	
+	<link href="${request.static_url('portfolio:static/default/css/bootstrap.css')}" rel="stylesheet" type="text/css" />
+	<link href="${request.static_url('portfolio:static/default/css/bootstrap-responsive.css')}" rel="stylesheet" type="text/css" />
+	<link href="${request.static_url('portfolio:static/default/css/main.css')}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+		<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div tal:repeat="queue ('info', 'success', 'error', '')" tal:omit-tag="">
+            <div class="alert alert-${queue}"
+                 tal:define="messages request.session.pop_flash(queue)"
+                 tal:condition="messages"
+                 tal:repeat="message messages">
+              ${message}
+            </div>
+          </div>
+        <div>
+             <form tal:replace="structure form" />
+        </div>
+		
+        <!-- footer -->
+		<footer id="footer">
+			
+		</footer>
+		
+        <script src="${request.static_url('portfolio:static/default/js/vendor/jquery-1.9.0.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/jquery-ui-1.10.2.custom.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/bootstrap.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/prettify.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/jquery.sparkline.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/jquery.mcustomscrollbar.concat.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/main.js')}"></script>
+	<!--<script src="${request.static_url('portfolio:static/default/js/page/index.js')}"></script> -->
+
+		
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      metal:use-macro="load: main.pt">
+	<div id="content" metal:fill-slot="content">
+		<div style="margin-top: 30px;">
+			<!--<form enctype="multipart/form-data" action="" method="post" class="main example3"> -->
+			<div class="whead">
+				<strong>Upload File</strong>
+			</div>	
+			<div class="box holder">
+				<!--
+				<div class="row">
+					<div class="grid1">
+						<label>Arquivo: </label>
+					</div>
+					<div class="grid2">
+						<input type="file" name="anexo" class="shiny required green-high" autofocus>
+					</div>
+				</div>
+				<div class="row">
+					<div class="grid1">
+						<label>Sigla: </label>
+					</div>
+					<div class="grid2">
+						<input type="text" name="sigla" class="shiny green-high" />
+					</div>
+				</div>		
+					
+				<div class="row">
+					<div class="grid3">
+						<input type="reset" value="Limpar" class="btn">
+						<input type="submit" value="Salvar" id="EnviarUsuario" class="submit">
+					</div>
+				</div>		
+				-->
+					
+				<div class="dropzone-box over-hide">
+					<div class="default message">
+						<span>Drop files here to upload</span>
+					</div>
+				</div>
+		
+			</div>
+			<!-- </form> -->
+		</div>
+	 </div>
+	<div metal:fill-slot="js_slot">
+		<script type="text/javascript" src="${request.static_url('portfolio:static/default/js/vendor/dropzone.js')}"></script>
+		<script type="text/javascript">
+		
+			$(document).ready(function(){
+
+					$(".dropzone-box").dropzone({
+						url: "/upload2",
+						addRemoveLinks: true,
+						dictDefaultMessage: '<i>Arraste e solte arquivos para enviar ou click.</i>',
+						dictResponseError: 'Ocorreu um erro no upload do arquivo'
+
+					});
+
+					Dropzone.options.dropzoneForm = {
+			            // The camelized version of the ID of the form element
+
+			            paramName: "files",
+			            autoProcessQueue: false,
+			            uploadMultiple: true,
+			            parallelUploads: 100,
+			            maxFiles: 100,
+			            previewsContainer: ".dropzone-previews",
+			            clickable: true,
+			            dictDefaultMessage: 'Add files to upload by clicking or droppng them here.',
+			            addRemoveLinks: true,
+			            acceptedFiles: '.jpg,.pdf,.png,.bmp',
+			            dictInvalidFileType: 'This file type is not supported.',
+
+			            // The setting up of the dropzone
+			            init: function () {
+			                var myDropzone = this;
+
+			                $("button[type=submit]").bind("click", function (e) {
+			                    e.preventDefault();
+			                    e.stopPropagation();
+			                    // If the user has selected at least one file, AJAX them over.
+			                    if (myDropzone.files.length !== 0) {
+			                        myDropzone.processQueue();
+			                    // Else just submit the form and move on.
+			                    } else {
+			                        $('#dropzone-form').submit();
+			                    }
+			                });
+
+			                this.on("successmultiple", function (files, response) {
+			                    // After successfully sending the files, submit the form and move on.
+			                    $('#dropzone-form').submit();
+			                });
+			            }
+			        }
+				
+			});
+		</script>
+		<link type="text/css" rel="stylesheet" href="${request.static_url('portfolio:static/default/css/vendor/dropzone.css')}"/>
+	</div>
+
+</html>

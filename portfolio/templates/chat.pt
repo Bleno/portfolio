@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      metal:use-macro="load: main.pt">
+			<div id="content"  metal:fill-slot="content">
+			<!--
+				<ul class="ch-grid">
+					
+					<li>
+						<div class="ch-item">				
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-1"></div>
+									<div class="ch-info-back">
+										<h3>Item content 1</h3>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-2"></div>
+									<div class="ch-info-back">
+										<h3>Item content 2</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-3"></div>
+									<div class="ch-info-back">
+										<h3>Item content 3</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li class="tip" title="Place some additional information in here">
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-4"></div>
+									<div class="ch-info-back">
+										<h3>Item content 4</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-5"></div>
+									<div class="ch-info-back">
+										<h3>Item content 5</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+				-->
+				<div class="wrapper">
+					
+					<div class="fluid">
+						
+						<div class="widget">
+							<div class="whead">
+								<strong>Bate Papo</strong>
+								<a id="connect" class="btn btn-link" href="javascript:;">Ficar online</a>
+							</div>
+							
+							<div class="box holder padd"  style="overflow-y:auto; overflow-x: none; height: 20em;">
+								<ul id="log" class="messages">
+									<!--
+									<li>
+										<a href="#">
+											<img src="${request.static_url('portfolio:static/folder_static/img/face_default.jpg')}" alt="">
+										</a>
+										<div class="text">
+											<strong>Usuário logado:</strong>
+											<span>x minutos atrás</span>
+											<br>
+											Mensagem
+										</div>
+									</li>
+									-->
+									
+									
+								</ul>
+							</div>
+							<div class="input-append">
+								<form id="form_chat">
+									<a  id="status" class="btn btn-inverse" href="javascript:;">Disconnected</a>
+									<input id="text" class="span2" type="text">
+									<button id="enviar" class="btn" type="button">Enviar</button>
+								</form>
+							</div>
+						</div>
+						<!--
+						<div class="widget">
+							<div class="whead">
+								<strong>Protocolos</strong>
+							</div>
+							
+							<div class="box holder table-messaging">
+								
+								<div id="protocols" style="float: right">
+									  <ul>
+									    <li>
+									      <input id="websocket" type="checkbox" value="websocket" checked="checked"></input>
+									      <label for="websocket">websocket</label>
+									    </li>
+									    <li>
+									      <input id="xhr-streaming" type="checkbox" value="xhr-streaming" checked="checked"></input>
+									      <label for="xhr-streaming">xhr-streaming</label>
+									    </li>
+									    <li>
+									      <input id="iframe-eventsource" type="checkbox" value="iframe-eventsource"
+									             checked="checked"></input>
+									      <label for="iframe-eventsource">iframe-eventsource</label>
+									    </li>
+									    <li>
+									      <input id="iframe-htmlfile" type="checkbox" value="iframe-htmlfile"
+									             checked="checked"></input>
+									      <label for="iframe-htmlfile">iframe-htmlfile</label>
+									    </li>
+									    <li>
+									      <input id="xhr-polling" type="checkbox" value="xhr-polling" checked="checked"></input>
+									      <label for="xhr-polling">xhr-polling</label>
+									    </li>
+									    <li>
+									      <input id="iframe-xhr-polling" type="checkbox" value="iframe-xhr-polling"
+									             checked="checked"></input>
+									      <label for="iframe-xhr-polling">iframe-xhr-polling</label>
+									    </li>
+									    <li>
+									      <input id="jsonp-polling" type="checkbox" value="jsonp-polling" checked="checked"></input>
+									      <label for="jsonp-polling">jsonp-polling</label>
+									    </li>
+									  </ul>
+									</div>
+								
+							</div>
+							
+							<form class="main">
+								<div class="shadow">
+									<div class="row example-search border-0 padd-0">
+										<div class="grid3 relative">
+											<input type="text" placeholder="Placeholder for input..." class="shiny placeholder no-shadow">
+											<a href="javascript:;" class="btn btn-default no-shadow">Go!</a>
+											<ul class="search-box"></ul>
+										</div>
+									</div>
+								</div>
+							</form>
+							
+							
+							
+						</div> -->
+						
+					</div>
+				</div>
+				<script src="http://cdn.sockjs.org/sockjs-0.3.2.min.js"></script>
+		        <script src="${request.static_url('portfolio:static/default/js/page/messaging.js')}"></script>
+		        <script src="${request.static_url('portfolio:static/folder_static/js/chat.js')}"></script>
+			</div>
+
+		
+       
+		
+</html>

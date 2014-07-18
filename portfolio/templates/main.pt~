@@ -1,0 +1,271 @@
+<!DOCTYPE html metal:define-macro="main">
+<!--[if lt IE 9]>      <html lang="en" class="ie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	
+	<!-- meta -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+	<meta name="keywords" content="sistema, demo" /> 
+	<!-- favicon -->
+	<link rel="shortcut icon" href="$request.static_url('portfolio:static/default/img/favicon.png')}" type="image/png">
+	
+	<!-- page title -->
+	<title>Portfolio</title>
+	
+	<!-- css -->
+	<link href="${request.static_url('portfolio:static/default/css/bootstrap.css')}" rel="stylesheet" type="text/css" >
+	<link href="${request.static_url('portfolio:static/default/css/bootstrap-responsive.css')}" rel="stylesheet" type="text/css" >
+	<link href="${request.static_url('portfolio:static/default/css/vendor/circle.hover.css')}" rel="stylesheet" type="text/css" >
+	<link href="${request.static_url('portfolio:static/default/css/vendor/fullcalendar.css')}" rel="stylesheet" type="text/css" >
+	<link href="${request.static_url('portfolio:static/default/css/vendor/sourcerer.css')}" rel="stylesheet" type="text/css" >
+    <link href="${request.static_url('portfolio:static/default/css/vendor/prettify.css')}" rel="stylesheet" type="text/css" >
+    <link href="${request.static_url('portfolio:static/default/css/vendor/jquery.mcustomscrollbar.css')}" rel="stylesheet" type="text/css" >
+    <link href="${request.static_url('portfolio:static/default/css/vendor/jquery.gritter.css')}" type="text/css" rel="stylesheet" >
+	<link href="${request.static_url('portfolio:static/default/css/main.css')}" rel="stylesheet" type="text/css" >
+	<link href="${request.static_url('portfolio:static/default/css/media.css')}" rel="stylesheet" type="text/css" >
+	
+	<!-- layout appearance -->
+    <script src="${request.static_url('portfolio:static/default/js/vendor/jquery-1.9.0.min.js')}"></script>
+	<script src="${request.static_url('portfolio:static/default/js/appearance.js')}"></script>
+
+</head>
+<body>
+	
+<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+		
+		<!-- gotop -->
+		<div id="gotop"></div>
+		
+		<!-- top navigation bar -->
+		<span class="accent-1"></span>
+		
+		<div class="navbar navbar-fixed-top">
+		  
+			<a href="dashboard.html">
+				<div id="logo"></div>
+			</a>
+
+			<div class="search">
+				<input type="text" placeholder="This is an ajax search input..." maxlength="50">
+			</div>
+			
+			<!-- header navigation -->
+			<nav class="nav">
+				<ul>
+					<li><a href="#">Admin settings</a></li>
+					<li><a href="#">User profile</a></li>
+					<li><a href="#">Permissions</a></li>
+					<li><a href="#">More options</a></li>
+					<li><a href="#">Go to page</a></li>
+				</ul>
+			</nav>
+			
+			<!-- right part header icons -->
+			<ul class="user-nav">
+				<li><a href="#" data-placement="bottom" class="icon-status tip" title="Check stats"></a></li>
+				<li><a href="#" data-placement="bottom" class="icon-user tip" title="User area"></a></li>
+				<li><a href="#" data-placement="bottom" class="icon-dialog tip" title="Some information"></a></li>
+				<li><a href="index.html" data-placement="bottom" class="icon-logout tip" title="Logout"></a></li>
+			</ul>
+			
+			<!-- user sidebar -->
+			<div id="user-settings" class="right-bar">
+				<div class="side-wrap top-10 main">
+					<ul class="top-5">
+						<li>Username: Carlo</li>
+						<li>Last login: 09.05.2013</li>
+						<li>User permissions: Admin</li>
+					</ul>
+					
+					<span class="dotted"></span>
+					
+					<ul>
+						<li>Name: Carlo</li>
+						<li>Last name: El Piccolo</li>
+						<li>Registered: 23.09.2012</li>
+						<li>Email: carlo@elpiccolo.com</li>
+					</ul>
+					
+					<span class="dotted"></span>
+					
+					<p class="top-5">Mauris nec velit orci, eget sollicitudin magna. Cras urna nibh, ullamcorper sit amet iaculis sit amet, pulvinar ut sem. Donec a adipiscing dolor. Phasellus commodo sollicitudin enim ullamcorper ornare. Cras molestie volutpat consequat. Suspendisse potenti. Quisque viverra iaculis mi, sed mollis quam porta eu. Pellentesque tincidunt nibh et turpis ornare accumsan. Pellentesque aliquam congue justo vel imperdiet.</p>
+					
+					<a class="btn btn-success">Go to profile</a>
+					
+				</div>
+			</div>
+			
+			<!-- search sidebar -->
+			<div class="search-box right-bar"></div>
+			
+			<!-- additional sidebar -->
+			<div id="additional" class="right-bar">
+				<div class="side-wrap top-10">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum commodo nisi vitae commodo. Ut nulla ligula, facilisis sit amet imperdiet id, porttitor nec diam. Sed et lacus a ipsum semper hendrerit. Integer fermentum lobortis ullamcorper. Ut feugiat ante in mi volutpat sollicitudin vel quis nisi. Aliquam erat volutpat. Aenean id justo libero. Curabitur vel felis quis ipsum sollicitudin laoreet.</p>
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<span>Visits</span>
+								<em>193</em>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<span>Users</span>
+								<em>163</em>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<span>Orders</span>
+								<em>55</em>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="side-wrap top-10">
+					<div class="progress-bar green stripes tip" title="Progress: 30%">
+						<span style="width: 30%"></span>
+					</div>
+					<div class="progress-bar red stripes tip" title="Progress: 50%">
+						<span style="width: 50%"></span>
+					</div>
+					<div class="progress-bar blue stripes tip" title="Progress: 70%">
+						<span style="width: 70%"></span>
+					</div>
+				</div>
+				
+				<span class="dotted"></span>
+			</div>
+			
+			<!-- appearance sidebar -->
+			<div id="pickup" class="right-bar">
+				<div class="side-wrap top-10">
+					<p class="top-10">Admin main color:</p>
+					<ul class="skin">
+						<li><a class="default active tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="default" href="javascript:;"></a></li>
+						<li><a class="black tip" title="Black" data-toggle="tooltip" data-placement="bottom" data-pick="black" href="javascript:;"></a></li>
+						<li><a class="azul tip" title="Blue" data-toggle="tooltip" data-placement="bottom" data-pick="azul" href="javascript:;"></a></li>
+						<li><a class="blanco tip" title="White" data-toggle="tooltip" data-placement="bottom" data-pick="blanco" href="javascript:;"></a></li>
+						<li><a class="reddish tip" title="Reddish" data-toggle="tooltip" data-placement="bottom" data-pick="reddish" href="javascript:;"></a></li>
+					</ul>
+				</div>
+				
+				<span class="dotted"></span>
+				
+				<div class="side-wrap top-10">
+					<p class="top-10">Admin background patterns:</p>
+					<ul class="pattern">
+						<li><a class="default active tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="1" href="javascript:;">1</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="2" href="javascript:;">2</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="3" href="javascript:;">3</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="4" href="javascript:;">4</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="5" href="javascript:;">5</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="6" href="javascript:;">6</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="7" href="javascript:;">7</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="8" href="javascript:;">8</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="9" href="javascript:;">9</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="10" href="javascript:;">10</a></li>
+					</ul>
+				</div>
+				
+				<span class="dotted"></span>
+			</div>
+		 
+		</div>
+		
+		
+		<!-- sidebar -->
+		<div class="sidebar-nav">
+			
+			<div id="user-box">
+				<span id="dynamic">5,10,15,20,18,16,14,20,15,16,12,10</span>
+				<em>$58,650</em>
+			</div>
+			
+			<a class="prof-pic right-open" href="javascript:;" data-href="#user-settings">
+				<img src="${request.static_url('portfolio:static/default/img/__tmp/sidebar.png')}" alt="">
+			</a>
+			
+			<!-- sidebar navigation -->
+			<ul id="navigation">
+				<li><a class="active" href="dashboard.html"><i class="nav-dashboard"></i>Dashboard</a></li>
+				<li>
+					<a href="javascript:;"><i class="nav-products"></i>Products<span>3</span></a>
+					<ul>
+						<li><a href="products_grid.html" class="tip" title="Place some additional information in here" data-placement="right">Grid view</a></li>
+						<li><a href="products_table.html">Table view</a></li>
+						<li><a href="gallery.html">Item gallery</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="nav-forms"></i>Forms stuff<span>4</span></a>
+					<ul>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="forms_validation.html">Form validation</a></li>
+						<li><a href="editor.html">Text editor</a></li>
+						<li><a href="file_upload.html">File management</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="nav-tables"></i>Tables<span>2</span></a>
+					<ul>
+						<li><a href="tables.html">Static tables</a></li>
+						<li><a href="tables_dynamic.html">Dynamic tables</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="nav-ui"></i>Ui elements<span>5</span></a>
+					<ul>
+						<li><a href="general_elements.html">General elements</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="buttons.html">Button sets</a></li>
+						<li><a href="invoice.html">Invoice template</a></li>
+						<li><a href="calendar.html">Calendar</a></li>
+					</ul>
+				</li>
+				<li><a href="locations.html"><i class="nav-map"></i>Google map locations</a></li>
+				<li><a href="typography.html"><i class="nav-typography"></i>Typography</a></li>
+				<li><a href="charts.html"><i class="nav-chart"></i>Charts and Graphs</a></li>
+				<li><a href="javascript:;" class="right-open" data-href="#additional"><i class="nav-additional"></i>Open additional sidebar</a></li>
+				<li><a href="javascript:;" class="right-open" data-href="#pickup"><i class="nav-color"></i>Appearance</a></li>
+				<li>
+					<a href="javascript:;"><i class="nav-pages"></i>Other pages<span>5</span></a>
+					<ul>
+						<li><a href="search.html">Search page</a></li>
+						<li><a href="404.html">404 page</a></li>
+						<li><a href="messaging.html">Messages</a></li>
+						<li><a href="grid.html">Grid layout</a></li>
+						<li><a href="blanc_page.html">Blanc page</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+        <div class="container" metal:define-slot="content"> <!-- /Inicio container -->
+		
+		 
+		</div> <!-- /FIM container -->
+        <script src="${request.static_url('portfolio:static/default/js/vendor/jquery-ui-1.10.2.custom.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/bootstrap.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/tweenLite/TweenMax.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/jquery.sparkline.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/prettify.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/excanvas.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/jquery.flot.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/jquery.flot.resize.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/fullcalendar.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/beautiful-data.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/ckeditor/ckeditor.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/jquery.mcustomscrollbar.concat.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/vendor/jquery.gritter.min.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/main.js')}"></script>
+        <script src="${request.static_url('portfolio:static/default/js/page/dashboard.js')}"></script>
+	
+</body>
+</html>
