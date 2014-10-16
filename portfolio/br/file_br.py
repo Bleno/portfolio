@@ -1,21 +1,17 @@
 from portfolio.dao.file_dao import FileDao
+"""
+Layer related business rules.
+"""
 
-
-class FileBR(object):
+class FileBR():
         
 
-    def upload_file(self, file_binary, name_field):
-        return FileDao().upload_file(file_binary, name_field)
+    def upload(self, files):
+        return FileDao().upload(files)
 
-    def insert_doc(self, obj_reg):
-        return FileDao().insert_doc(obj_reg)
 
-    
-    def multi_upload(self, files):
-        return FileDao().multi_files(files)
+    def create_document(self, document):
+        return FileDao().create_document(document)
 
-    def download_file(self, id_doc):
-        return FileDao().download_file(id_doc)
-
-    def getListFiles(self, objPesquisa):
-        return FileDao().getListFiles(objPesquisa)
+    def download(self, id_doc):
+       return FileDao().download(id_doc)

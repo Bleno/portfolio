@@ -22,7 +22,7 @@ class LoginSchema(Schema):
     remember = SchemaNode(String(), widget=CheckboxWidget(),
                           title='Remember me')
 
-#@view_config(name='login', renderer='../templates/login.pt')
+@view_config(name='login', renderer='../templates/login.pt')
 class Login(FormView):
     schema = LoginSchema()
     button_edit = Button(name='reset', title=None, type='reset',
@@ -37,9 +37,9 @@ class Login(FormView):
         user = User( str_login=appstruct['username'], 
                     str_password= appstruct['password'])
         userBr = UserBR()
-        usuario_logado = userBr.checkUser(user).data
-        if usuario_logado:
-            self.request.session['usuario'] = usuario
+        srov = userBr.checkUser(user)
+        if srov.status:
+            self.request.session['usuario'] = srov.data.str_login
             return HTTPFound(location = "/")
         else:
             return self.bad_login()

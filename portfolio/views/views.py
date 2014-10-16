@@ -9,7 +9,7 @@ from pyramid.security import authenticated_userid
 from pyramid.security import remember, forget
 
 @view_config(route_name='home', renderer='../templates/home.pt'
-             )#permission="edit")
+             ,permission="edit")
 def my_view(request):
     return {'title': 'Home'}
 

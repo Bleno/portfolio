@@ -7,7 +7,7 @@ from pyramid.response import Response
 
 from portfolio.br.file_br import FileBR
 from portfolio.dao.file_dao import FileDao
-from portfolio.models.fileupload import UploadFile
+from portfolio.models.fileupload import pp_files
 
 from mimetypes import MimeTypes
 import os

@@ -2,12 +2,13 @@
 # user_dao.py 
 # arquivo responssavel pela comunicação com o rest
 
-#from BRLightLib.Modelos import Pesquisa
-#from BRLightLib.Base import Base
+from liblightbase.lbrest.document import DocumentREST
+from liblightbase.lbsearch.search import Search
+from liblightbase.lbutils.conv import *
+from liblightbase.lbutils import *
 from portfolio.models.user import User
 from portfolio.models.srov import Srov
-from io import StringIO
-import json
+
 
 
 class UserDao(object):
@@ -17,29 +18,23 @@ class UserDao(object):
     BASENAME = "pp_user"
 
     def checkUser(self, user):
-        p= Pesquisa()
-        p.setSelect("json_reg")
-        p.setSelect("id_reg")
-        p.literal = " str_login = '{0}' and str_password = '{1}' ".format(user.str_login, user.str_password )
-        base = Base(self.name_base)
-        json_data = StringIO( base.research(p))
-        dict_data = json.load(json_data)
-        a = dict_data
-        if a['result_count']:
-            id_reg =  a['results'][0]['id_reg']
-            nome = a['results'][0]['json_reg']['str_nm_user']
-            email = a['results'][0]['json_reg']['str_email']
-            login = a['results'][0]['json_reg']['str_login']
-            senha = a['results'][0]['json_reg']['str_password']
-            status = a['results'][0]['json_reg']['bool_status']
-            group = a['results'][0]['json_reg']['str_group_user']
-            user = User(id_reg, nome, email,login, senha, status, group)
-            return Srov(True, user ,"Usuario logado com sucesso")
+        #p= Pesquisa()
+        #p.setSelect("json_reg")
+        #p.setSelect("id_reg")
+        query = Search()
+        query.literal = " str_login = '{0}' and str_password = '{1}' ".format(user.str_login, user.str_password )
+        query.limit = 1
+        base = json2base(User.__json__())
+        collection = DocumentREST("http://api.brlight.net/api", base).get_collection(query)
+        if collection.result_count:
+            user_login = collection.results[0]
+            return Srov(True, user_login ,"Usuario logado com sucesso")
         else:
-            return Srov(False, None ,"Usuário ou senha incorretos")
+            return Srov(False, user ,"Usuário ou senha incorretos")
 
 
     def getAllUsers(self):
+        pass
         pesquisa = Pesquisa()
         pesquisa.setSelect('json_reg')
         pesquisa.limit = None
@@ -50,6 +45,7 @@ class UserDao(object):
         return dict_data
 
     def getJsonUsers(self, search):
+        pass
         base = Base(self.name_base)
         json_data = base.research(search)
         return json_data

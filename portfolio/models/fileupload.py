@@ -1,8 +1,7 @@
 
+class pp_files():
 
-class UploadFile(object):
-
-    def __init__(self, obs = ""):
+    def __init__(self, obs = "", json_file = ""):
 
         self.str_observacao = obs
-        self.arquivo_anexo = ""
+        self.arquivo_anexo = json_file

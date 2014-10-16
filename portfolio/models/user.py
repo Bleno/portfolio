@@ -1,3 +1,5 @@
+import requests
+
 class User(object):
 
     __parent__ = __name__ = None
@@ -12,11 +14,14 @@ class User(object):
         self.bool_status = bool_status
         self.str_group_user = str_group_user
 
-    def getSaveStructure():
-        return {"str_nm_user":self.str_nm_user ,
+    def getSaveStructure(self):
+        return {"str_nm_user": self.str_nm_user ,
                 "str_group_user":self.str_group_user,
                 "str_email":self.str_email,
                 "str_login":self.str_login,
                 "str_password":self.str_password,
                 "bool_status":self.bool_status,
                                 }
+    @classmethod
+    def __json__(self):
+        return requests.get("http://api.brlight.net/api/pp_user").text
