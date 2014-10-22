@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 from portfolio.dao.group_dao import GroupDao
 
 
