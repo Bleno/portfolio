@@ -24,13 +24,13 @@ def uploadFile(request):
         
         file_tuple = (filename, binary_content)
         json_file = FileBR().upload(file_tuple)
-        dict_json = json.load(StringIO(json_file))
+        dict_json = json.loads(json_file)
         print(json_file)
         pp_files_obj = pp_files('Pyramid', dict_json)
         print(pp_files_obj.__dict__)
         nr_id_doc = FileBR().create_document(pp_files_obj)
 
-        return Response(nr_id_doc.text)
+        return Response(str(nr_id_doc))
 
     else:
         return { }

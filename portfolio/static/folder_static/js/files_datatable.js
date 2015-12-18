@@ -34,8 +34,8 @@ function geraColunas() {
                         { "sTitle": "Login", "sClass": "center ws", "sWidth": "30%", "mData": "json_reg.str_login" },
                         { "sTitle": "Email", "sClass": "center ws", "sWidth": "30%", "mData": "json_reg.str_email" }
 						*/
-			{"sWidth": '200px', "mDataProp": "nome_doc"},
-        		{"sWidth": '200px', "mDataProp": "mimetype"},
+			{"sWidth": '200px', "mDataProp": "arquivo_anexo.filename"},
+            {"sWidth": '200px', "mDataProp": "arquivo_anexo.mimetype"},
 			{ "sWidth":'100px' ,"mDataProp": function(data, type, json_reg) {
                          var url_base = String(window.location.host + '/')
                                var buttonAction = '<div class="btn-group">\

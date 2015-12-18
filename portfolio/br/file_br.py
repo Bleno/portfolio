@@ -15,3 +15,6 @@ class FileBR():
 
     def download(self, id_doc):
        return FileDao().download(id_doc)
+
+    def getListFiles(self, query):
+    	return FileDao().getListFiles(query)

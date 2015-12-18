@@ -1,13 +1,14 @@
 # -*- encoding: utf-8 -*-
 import json
+import traceback
 from pyramid.view import view_config
 from pyramid.response import Response
 
 
 from portfolio.br.file_br import FileBR
-#from BRLightLib.Modelos import Pesquisa
+from liblightbase.lbsearch.search import Search
 
-@view_config(name = 'ajax_files')
+@view_config(name = 'ajax_files', renderer='json')
 def json_user(request):
     try:
         # recebe os parametros do datatable
@@ -20,17 +21,28 @@ def json_user(request):
 
 
 
-        query = Pesquisa()
-        query.select = ['mimetype', 'nome_doc', 'id_doc']
-        query.limit = limit
-        query.offset = offset
+        query = Search()
+        query.select = ['mimetype', 'filename', 'id_doc']
+        query.limit = int(limit)
+        query.offset = int(offset)
         if sSearch :
-            query.literal = "texto_doc like '%{0}%'".format(sSearch)
+            query.literal = "UPPER(texto_doc) like '%{}%' OR UPPER(filename) like like '%{}%'".format(sSearch)
 
-        json_data = FileBR().getListFiles(query)
-        json_data = json_data.replace('offset','iDisplayStart').replace('limit','DisplayLength').replace('result_count','iTotalDisplayRecords').replace('results','aaData')
-        return Response(json_data, content_type='application/json')
+        dict_data = FileBR().getListFiles(query)
+        datatable_return = {}
+        # json_data = json_data.replace('offset','iDisplayStart')\
+        #                     .replace('limit','DisplayLength')\
+        #                     .replace('result_count','iTotalDisplayRecords')\
+        #                     .replace('results','aaData')
+
+        datatable_return['iDisplayStart'] = dict_data['offset']
+        datatable_return['DisplayLength'] = dict_data['limit']
+        datatable_return['iTotalDisplayRecords'] = dict_data['result_count']
+        datatable_return['aaData'] = dict_data['results']
+        return datatable_return
+        #return Response(json_data, content_type='application/json')
     except Exception as e:
+        print(str(traceback.format_exc()))
         dict_data = {'aaData': [], "sEcho": sEcho,"iTotalRecords": limit ,"iTotalDisplayRecords": 0 }
         
         json_data = json.dumps(dict_data)

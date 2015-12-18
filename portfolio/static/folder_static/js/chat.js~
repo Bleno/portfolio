@@ -27,7 +27,7 @@
       var transports = ['websocket', 'xdr-streaming', 'xhr-streaming', 'iframe-eventsource',
                        'iframe-htmlfile', 'xdr-polling', 'xhr-polling', 'iframe-xhr-polling', 'jsonp-polling']
 
-        conn = new SockJS('http://10.1.0.128:9300/__sockjs__', transports, {debug: true});
+        conn = new SockJS('http://192.168.0.100:8089/__sockjs__', transports, {debug: true});
 
         //log('Connecting...');
         status('Conectando...');
